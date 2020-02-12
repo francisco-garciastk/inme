@@ -15,6 +15,7 @@ public class CatalogoComponent {
 	@Autowired
 	private AreaService areaService;
 	
+	
 	public List<AreaAdquisicion> getAreas() {
 		return areaService.getAreas();
 	}

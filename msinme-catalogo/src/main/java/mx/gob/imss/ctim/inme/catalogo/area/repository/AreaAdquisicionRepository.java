@@ -1,9 +1,9 @@
 package mx.gob.imss.ctim.inme.catalogo.area.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
 import mx.gob.imss.ctim.inme.catalogo.area.entity.AreaAdquisicionEntity;
 
-public interface AreaAdquisicionRepository extends JpaRepository<AreaAdquisicionEntity, Long> {
+public interface AreaAdquisicionRepository extends CrudRepository<AreaAdquisicionEntity, Integer> {
 
 }

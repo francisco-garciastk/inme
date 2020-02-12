@@ -1,20 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package mx.gob.imss.ctim.inme.catalogo.area.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.io.Serializable;
 
-import lombok.AllArgsConstructor;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
+
 import lombok.Data;
 
+/**
+ *
+ * @author francisco.garcia
+ */
 @Entity
+@Table(name = "CatAreasAdquisiciones")
 @Data
-@AllArgsConstructor
-public class AreaAdquisicionEntity {
-	@Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-	long id;
-    String descripcion;
+public class AreaAdquisicionEntity implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+    @Id
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "idAreaAdquisiciones")
+    private Integer id;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 50)
+    @Column(name = "areaAdquisiciones")
+    private String descripcion;
+    
 }

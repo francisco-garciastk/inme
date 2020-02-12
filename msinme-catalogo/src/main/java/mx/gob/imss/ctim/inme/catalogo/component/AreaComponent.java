@@ -1,6 +1,5 @@
 package mx.gob.imss.ctim.inme.catalogo.component;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +15,8 @@ public class AreaComponent {
 	AreaAdquisicionRepository areaAdquisicionRepository;
 	
 	public List<AreaAdquisicionEntity> getAreas() {
-		AreaAdquisicionEntity[] areasArray = { 
-				new AreaAdquisicionEntity(1L,"Bienes"),
-				new AreaAdquisicionEntity(2L,"Servicio"),
-				new AreaAdquisicionEntity(3L,"Obra")};
-		 List<AreaAdquisicionEntity> areas = Arrays.asList(areasArray);
-//		 List<AreaAdquisicionEntity> areas= areaAdquisicionRepository.findAll();
+
+		 List<AreaAdquisicionEntity> areas= (List<AreaAdquisicionEntity>) areaAdquisicionRepository.findAll();
 
 		 return areas;
 	}

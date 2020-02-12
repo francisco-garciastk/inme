@@ -8,7 +8,7 @@ public class AreaAdquisicion implements Serializable {
 	
 	private static final long serialVersionUID = 6400039598516335455L;
 	
-	private long id;
+	private Integer id;
 	private String descripcion;
 	
 }

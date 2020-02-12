@@ -13,5 +13,6 @@
 	<modules>
 		<module>guiinme-catalogo</module>
 		<module>msinme-catalogo</module>
+		<module>guiinme-investigacion</module>
 	</modules>
 </project>
